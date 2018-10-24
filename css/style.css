@@ -1,0 +1,92 @@
+/* TAG */
+html {
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+}
+html,
+body {
+    /* min-height: 777px; */
+    height: 100%; 
+}
+
+/* CLASS */
+.container {
+    height: 100%;
+    background: url(../images/bg-authorization.png) center no-repeat;
+    background-size: cover;
+}
+
+/* HEADER */
+.header {
+    padding: 20px 75px 20px 80px;
+    background-color:  rgba(0, 0, 0, 0.41);
+    line-height: 24px;
+    text-align: right;
+}
+/* Logo */
+.logo {
+    float: left;
+}
+.logo a {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/* Navigation */
+.navigation {  
+    display: inline-block;
+    clear: both;
+    padding-right: 25px;
+}
+.navigation_icons {
+    display: inline-block;
+    margin-left: 28px;
+    background: url(../images/icons/ic-sp_navigation.png) no-repeat;
+}
+.calendar {
+    height: 21px;
+    width: 21px;
+    background-position: -27px -27px;
+}
+.forum {
+    height: 22px;
+    width: 30px;
+    background-position: -178px -27px;
+}
+.compas {
+    height: 22px;
+    width: 22px;
+    background-position: -102px -27px;
+}
+/* Welcome */
+.welcome {
+    float: right;
+    padding-left: 25px;
+    border-left: 1px solid #2D2C2C;
+    color: #ffffff;
+    font-size: 14px;
+}
+.welcome a {
+    color: #3cb878;
+    text-transform: capitalize;
+}
+.welcome::before {
+    content: "Welcome, ";
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* MAIN */
+.form_wrap {
+    padding: 65px 0;
+}
+/* Form */
+.registration {
+    width: 444px;
+    height: 584px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.52);
+}
