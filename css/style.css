@@ -17,6 +17,15 @@ body {
     background-size: cover;
 }
 
+.btn {
+    padding: 9px 0;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 28px;
+    border-radius: 3px;
+}
+
 /* HEADER */
 .header {
     padding: 15px 75px 15px 80px;
@@ -63,12 +72,13 @@ body {
 .welcome {
     float: right;
     padding-left: 25px;
-    border-left: 1px solid #2D2C2C;
+    border-left: 1px solid #302D2C;
     color: #ffffff;
     font-size: 14px;
     line-height: 24px;
 }
-.welcome a {
+.welcome a,
+.agreement {
     color: #3cb878;
     text-transform: capitalize;
 }
@@ -85,7 +95,7 @@ body {
 /* Registrartion */
 .registration {
     width: 444px;
-    height: 584px;
+    min-height: 584px;
     margin: 0 auto;
     padding: 30px 60px;
     background: #ffffff;
@@ -93,6 +103,7 @@ body {
     box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.52);
 }
 
+/* Registration header */
 .registration_header {
     line-height: 24px;
 }
@@ -100,37 +111,133 @@ body {
     text-transform: capitalize;
 }
 .sign_up {
+    position: relative;
     float: left;
     color: #434343;
     font-size: 20px;
 }
+.sign_up::before {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 18px;
+    width: 18px;
+    background-color: #3BB677;
+    top: 3px;
+    left: -60px;
+}
 .log_in {
     float: right;
-    color: #3cb878;
+    color: #38B877;
     font-size: 14px;
 }
 
+/* Social Log In */
 .social_log_in {
     margin-top: 15px;
 }
-/* .social_log_in:first-child {
+
+.social_btn {
+    width: 157px;
+    text-align: center;
+}
+.social_btn:first-of-type {
     float: left;
 }
-.social_log_in:last-child {
+.social_btn:last-of-type {
     float: right;
-} */
-.btn {
-    display: inline-block;
-    height: 46px;
-    padding: 9px 0;
-    text-transform: capitalize;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 28px;
 }
+
 .facebook_btn {
     background-color: #2B5BB8;
 }
+.facebook_btn .social_name::before {
+    content: url(../images/icons/ic_facebook.png);
+    position: absolute;
+    top: 4px;
+    left: -28px;
+    line-height: 0;
+}
 .google_btn {
     background-color: #DD472E;
+}
+.google_btn .social_name::before {
+    content: url(../images/icons/ic_google.png);
+    position: absolute;
+    top: 6px;
+    left: -35px;
+    line-height: 0;
+}
+
+.social_name {
+    position: relative;
+    display: inline-block;
+    margin-left: 47px;
+    width: 110px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+.registration_form {
+    margin-top: 37px;
+    padding-top: 10px;
+    border-top: 1px solid #E7E7E7;
+}
+
+.registration_form input[class^="input"] {
+    height: 46px;
+    width: 100%;
+    margin: 5px 0;
+    padding-left: 17px;
+    border: 1px solid #E8E8E8;
+    border-radius: 3px;
+    color:  #bebebe;
+    font-size: 14px;
+    line-height: 46px;
+    
+}
+.registration_form input[class^="input"]:focus {
+    margin: 11px 0;
+    color: #434343;
+}
+
+/* Customixed checkbox */
+.check_agreement {
+    position: relative;
+    display: block;
+    margin: 20px 0;
+    padding-left: 32px;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+.check_agreement input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.check_agreement span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #E8E8E8;
+    border-radius: 3px;
+    background-color: #ffffff;
+
+}
+.check_agreement input:checked + span {
+    background: url("../images/icons/checkbox.png") center no-repeat;
+}
+
+
+.submit {
+    width: 100%;
+    margin-top: 5px;
+    background-color: #38B877;
+    border: none;
 }

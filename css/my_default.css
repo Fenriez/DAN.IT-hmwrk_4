@@ -12,6 +12,10 @@ a, a:hover, a:active {
     text-decoration: none;
 }
 
+input {
+    outline: none;
+}
+
 .clearfix:after {
     content: "";
     display: block;

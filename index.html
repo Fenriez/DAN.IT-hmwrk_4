@@ -46,16 +46,28 @@
                     <p class="sign_up">sign up</p>
                     <p class="log_in">log in</p>
                 </div>
-                <div class="social_log_in">
-                    <a class="btn facebook_btn">
+                <div class="social_log_in clearfix">
+                    <a class="btn social_btn facebook_btn" href="#">
                         <p class="social_name">facebook</p>
                     </a>
-                    <a class="btn google_btn">
+                    <a class="btn social_btn google_btn" href="#">
                         <p class="social_name">google</p>
                     </a>
                 </div>
-                <form action="" class="registration_form">
 
+
+                <form action="" class="registration_form">
+                    <input type="text" class="input_name" placeholder="Name">
+                    <input type="text" class="input_lastname" placeholder="Last Name">
+                    <input type="email" class="input_email" placeholder="Email">
+                    <input type="password" class="input_password" placeholder="Password">
+                    <input type="password" class="input_password_confirm" placeholder="Confirm Password">
+                    <label class="check_agreement">
+                        <input type="checkbox">
+                        <span></span>
+                        Agree our <a href="#" class="agreement">Terms & Conditions</a>
+                    </label>
+                    <input class="btn submit" type="submit" action="#" value="Create Account">
                 </form>
             </div>
         </div>
