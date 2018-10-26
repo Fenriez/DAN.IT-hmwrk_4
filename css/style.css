@@ -5,14 +5,13 @@ html {
 }
 html,
 body {
-    /* min-height: 777px; */
     height: 100%; 
 }
 
 /* CLASS */
 .container {
-    height: 100%;    
-    min-height: 960px;
+    height: 100%;  
+    min-height: 638px;  
     background: url(../images/bg-authorization.png) center no-repeat;
     background-size: cover;
 }
@@ -32,6 +31,7 @@ body {
     background-color:  rgba(0, 0, 0, 0.41);
     text-align: right;
 }
+
 /* Logo */
 .logo {
     float: left;
@@ -41,7 +41,13 @@ body {
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
+    transition: 0.4s ease-out;
 }
+.logo a:hover {
+    color: #3cb878;
+    transition: 0.4s ease-out;
+}
+
 /* Navigation */
 .navigation {  
     display: inline-block;
@@ -53,21 +59,34 @@ body {
     margin-left: 28px;
     background: url(../images/icons/ic-sp_navigation.png) no-repeat;
 }
+
 .calendar {
     height: 21px;
     width: 21px;
-    background-position: -27px -27px;
+    background-position: -19px -19px;
 }
+.calendar:hover {
+    background-position: -78px -19px;
+}
+
 .forum {
     height: 22px;
     width: 30px;
-    background-position: -178px -27px;
+    background-position: -139px -19px;
 }
+.forum:hover {
+    background-position: -139px -79px;
+}
+
 .compas {
     height: 22px;
     width: 22px;
-    background-position: -102px -27px;
+    background-position: -19px -78px;
 }
+.compas:hover {
+    background-position: -79px -78px;
+}
+
 /* Welcome */
 .welcome {
     float: right;
@@ -78,25 +97,41 @@ body {
     line-height: 24px;
 }
 .welcome a,
-.agreement {
+.agreement,
+.log_in {
     color: #3cb878;
     text-transform: capitalize;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    transition: 0.4s ease-out;
 }
 .welcome::before {
     content: "Welcome, ";
     color: #ffffff;
     font-size: 14px;
 }
+.welcome a:hover,
+.agreement:hover,
+.log_in:hover {
+    border-bottom: 1px solid #3cb878;
+    transition: 0.4s ease-out;
+}
 
 /* MAIN */
 .main {
-    padding: 65px 0;
+    position: relative;
+    height: calc(100% - 54px);
+    height: -webkit-calc(100% - 54px);
 }
+
 /* Registrartion */
 .registration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 444px;
-    min-height: 584px;
-    margin: 0 auto;
+    height: 584px;
+    /* margin: 0 auto; */
     padding: 30px 60px;
     background: #ffffff;
     border-radius: 10px;
@@ -104,10 +139,7 @@ body {
 }
 
 /* Registration header */
-.registration_header {
-    line-height: 24px;
-}
-.registration_header p {
+.registration_header a {
     text-transform: capitalize;
 }
 .sign_up {
@@ -128,7 +160,8 @@ body {
 }
 .log_in {
     float: right;
-    color: #38B877;
+    padding-top: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
     font-size: 14px;
 }
 
@@ -136,7 +169,6 @@ body {
 .social_log_in {
     margin-top: 15px;
 }
-
 .social_btn {
     width: 157px;
     text-align: center;
@@ -150,6 +182,11 @@ body {
 
 .facebook_btn {
     background-color: #2B5BB8;
+    transition: 0.4s ease-out;
+}
+.facebook_btn:hover {
+    background-color:  #264b96;
+    transition: 0.4s ease-out;
 }
 .facebook_btn .social_name::before {
     content: url(../images/icons/ic_facebook.png);
@@ -158,8 +195,14 @@ body {
     left: -28px;
     line-height: 0;
 }
+
 .google_btn {
     background-color: #DD472E;
+    transition: 0.4s ease-out;
+}
+.google_btn:hover {
+    background-color: #c3412c;
+    transition: 0.4s ease-out;
 }
 .google_btn .social_name::before {
     content: url(../images/icons/ic_google.png);
@@ -179,26 +222,42 @@ body {
 
 /* Form */
 .registration_form {
+    position: relative;
     margin-top: 37px;
     padding-top: 10px;
     border-top: 1px solid #E7E7E7;
 }
-
+.registration_form::before {
+    content: "or";
+    position: absolute;
+    top: -11px;
+    left: 137px;
+    width: 52px;
+    background-color: #fff;
+    color: #848484;
+    font-size: 14px;
+    text-align: center;
+    z-index: 10;
+}
 .registration_form input[class^="input"] {
     height: 46px;
     width: 100%;
     margin: 5px 0;
     padding-left: 17px;
     border: 1px solid #E8E8E8;
-    border-radius: 3px;
-    color:  #bebebe;
+    border-radius: 3px;    
+    color: #434343;
     font-size: 14px;
-    line-height: 46px;
-    
+    line-height: 46px;    
+    transition: 0.4s ease-out;
+}
+.registration_form input[class^="input"]::placeholder {
+    color: #bebebe;
 }
 .registration_form input[class^="input"]:focus {
     margin: 11px 0;
-    color: #434343;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.21);
+    transition: 0.4s ease-out;
 }
 
 /* Customixed checkbox */
@@ -234,10 +293,15 @@ body {
     background: url("../images/icons/checkbox.png") center no-repeat;
 }
 
-
 .submit {
     width: 100%;
     margin-top: 5px;
     background-color: #38B877;
     border: none;
+    transition: 0.4s ease-out;
+    cursor: pointer;
+}
+.submit:hover {
+    background-color: #2E9964;
+    transition: 0.4s ease-out;
 }
