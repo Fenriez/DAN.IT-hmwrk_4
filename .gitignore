@@ -6,3 +6,6 @@
 
 #Thumbs files
 Thumbs.db
+
+#gitignore
+*.gitignore
